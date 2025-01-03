@@ -6,7 +6,7 @@
 
 # Inherit some common stuff
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 
 # Inherit device configuration
 DEVICE_CODENAME := raven
@@ -19,7 +19,9 @@ $(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-lineage.mk)
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 6 Pro
-PRODUCT_NAME := lineage_$(DEVICE_CODENAME)
+PRODUCT_NAME := droidx_$(DEVICE_CODENAME)
+
+DROIDX_GAPPS := true
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
